@@ -80,7 +80,7 @@ constructor(private imageSearchService : ImageSearchService) {}
   hits: ImageSearchHit[];
   onImageSearch(q : string){
     const  config: ImageSearchOptions = {
-      key: '20544567-e47a8ffeb9236543d363ad1b5',
+      key: 'API_KEY' // required, sign up at pixabay site to get it. It's free
       lang: 'pt',
       per_page: 10
     }

@@ -73,7 +73,7 @@ import { ImageSearchHit, ImageSearchResult, ImageSearchService, ImageSearchOptio
 
 ...
 
-constructor(private imageSearch : ImageSearchService) {}
+constructor(private imageSearchService : ImageSearchService) {}
 
 // using Rxjs Observable
 

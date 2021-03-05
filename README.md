@@ -45,21 +45,52 @@ export interface ImageSearchHit {
 
 ## Usage
 
+# In a Angular project
+
 ```
+//app.module.ts
+
+@NgModule({
+  declarations: [ ...],
+  imports: [
+    ...
+    BrowserModule,
+    ImageSearchModule,
+    HttpClientModule,
+    ...
+  ],
+  providers: [],
+  bootstrap: [ ... ]
+})
+```
+
+
+
+```
+//app.component.ts
+
+import { ImageSearchHit, ImageSearchResult, ImageSearchService, ImageSearchOptions } from 'image-search';
+
+...
+
+constructor(private imageSearch : ImageSearchService) {}
+
 // using Rxjs Observable
 
-onSearch(q: string){
+  hits: ImageSearchHit[];
+  onImageSearch(q : string){
     const  config: ImageSearchOptions = {
-      key: 'PIXABAY KEY', // required, subscribe to the pixabay site to get it. It's free
+      key: '20544567-e47a8ffeb9236543d363ad1b5',
       lang: 'pt',
       per_page: 10
     }
-    this.imageSearch.init(config);
-    this.imageSearch.search(q).subscribe(
+    this.imageSearchService.init(config);
+    this.imageSearchService.search(q).subscribe(
       (result: ImageSearchResult) => {
         this.hits = result.hits;
       }
     );
   };
+
 ```
 

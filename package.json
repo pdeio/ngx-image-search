@@ -1,0 +1,11 @@
+{
+  "name": "pdeio-image-search",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@angular/common": "^11.2.3",
+    "@angular/core": "^11.2.3"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
